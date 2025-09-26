@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Credence - Decentralized Human-Verified Polling Platform
 
 A privacy-first polling platform where verified humans contribute authentic opinions while earning rewards and maintaining complete anonymity.
@@ -30,3 +31,6 @@ npm run dev
 - All responses stored anonymously on Walrus
 - Smart contracts handle rewards and governance
 - Community votes on best weekly contributions
+=======
+# Newrepo1
+>>>>>>> cf80a920b37b250e30050dcbcd58b29a297d9708
