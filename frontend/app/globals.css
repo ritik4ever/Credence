@@ -1,53 +1,37 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 @layer base {
     html {
-        scroll-behavior: smooth;
+        font-family: system-ui, -apple-system, sans-serif;
     }
 
     body {
-        font-feature-settings: 'rlig' 1, 'calt' 1;
+        @apply bg-white text-gray-900 antialiased;
     }
 }
 
 @layer components {
-    .btn {
-        @apply inline-flex items-center justify-center rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
-    }
-
     .btn-primary {
-        @apply btn bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500 shadow-lg hover:shadow-xl;
+        @apply bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200;
     }
 
     .btn-secondary {
-        @apply btn bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 focus:ring-primary-500;
+        @apply bg-white text-gray-900 px-6 py-3 rounded-lg font-medium border border-gray-200 hover:bg-gray-50 transition-colors duration-200;
     }
 
     .card {
-        @apply bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200;
+        @apply bg-white border border-gray-200 rounded-lg p-6 shadow-sm;
     }
 
-    .gradient-text {
-        @apply bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent;
+    .input {
+        @apply w-full px-4 py-3 border border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none transition-colors duration-200;
     }
 }
 
 @layer utilities {
-    .animate-float {
-        animation: float 6s ease-in-out infinite;
-    }
-
-    @keyframes float {
-
-        0%,
-        100% {
-            transform: translateY(0px);
-        }
-
-        50% {
-            transform: translateY(-20px);
-        }
+    .gradient-text {
+        @apply bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent;
     }
 }

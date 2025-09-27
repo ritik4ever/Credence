@@ -1,15 +1,10 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
 import { Providers } from './providers'
-import { Toaster } from '@/components/ui/toaster'
-
-const inter = Inter({ subsets: ['latin'] })
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-    title: 'Credence - Verified Human Polling',
-    description: 'Decentralized polling platform with human verification and anonymous participation',
-    keywords: 'blockchain, polling, survey, self protocol, decentralized, privacy',
+    title: 'Credence - Human Verified Polling',
+    description: 'Decentralized polling with Self Protocol verification and rewards',
 }
 
 export default function RootLayout({
@@ -18,11 +13,10 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <html lang="en" className="h-full">
-            <body className={`${inter.className} h-full bg-gradient-to-br from-slate-50 to-blue-50`}>
+        <html lang="en">
+            <body className="antialiased bg-white">
                 <Providers>
                     {children}
-                    <Toaster />
                 </Providers>
             </body>
         </html>
