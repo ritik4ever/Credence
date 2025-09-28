@@ -1,11 +1,11 @@
+'use client'
+
+import { Inter } from 'next/font/google'
 import './globals.css'
 import { Providers } from './providers'
-import type { Metadata } from 'next'
+import { VerificationGate } from '@/components/VerificationGate'
 
-export const metadata: Metadata = {
-    title: 'Credence - Human Verified Polling',
-    description: 'Decentralized polling with Self Protocol verification and rewards',
-}
+const inter = Inter({ subsets: ['latin'] })
 
 export default function RootLayout({
     children,
@@ -14,9 +14,11 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className="antialiased bg-white">
+            <body className={inter.className}>
                 <Providers>
-                    {children}
+                    <VerificationGate>
+                        {children}
+                    </VerificationGate>
                 </Providers>
             </body>
         </html>

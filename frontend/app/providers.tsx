@@ -29,7 +29,7 @@ const celoSepolia = {
 // Use a valid project ID or disable WalletConnect
 const config = getDefaultConfig({
     appName: 'Credence',
-    projectId: process.env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID || undefined,
+    projectId: process.env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID || '', // Use empty string as fallback
     chains: [celoSepolia],
     transports: {
         [celoSepolia.id]: http(),

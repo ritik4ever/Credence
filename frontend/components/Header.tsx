@@ -72,6 +72,10 @@ export function Header() {
                     </button>
                 </div>
 
+                <Link href="/community" className="text-gray-600 hover:text-gray-900 font-medium">
+                    Community Awards
+                </Link>
+
                 {mobileMenuOpen && (
                     <div className="md:hidden py-4 border-t border-gray-200">
                         <div className="space-y-4">

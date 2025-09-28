@@ -17,10 +17,12 @@
     "devDependencies": {
         "@nomicfoundation/hardhat-toolbox": "^2.0.0",
         "@nomiclabs/hardhat-etherscan": "^3.1.0",
-        "hardhat": "^2.12.0",
-        "dotenv": "^16.0.0"
+        "dotenv": "^16.0.0",
+        "hardhat": "^2.12.0"
     },
     "dependencies": {
-        "@openzeppelin/contracts": "^4.8.0"
+        "@openzeppelin/contracts": "^4.9.6",
+        "@selfxyz/contracts": "^1.2.3",
+        "@selfxyz/core": "^1.1.0-beta.6"
     }
 }
